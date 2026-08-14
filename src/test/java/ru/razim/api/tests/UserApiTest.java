@@ -446,8 +446,9 @@ public class UserApiTest extends BaseTest {
                         response.getRegisterData().getGameId()
                 );
 
-        assertThat(gameResponse.getDlcs().length, equalTo(0));
         assertThat(gameResponse, notNullValue());
+        assertThat(gameResponse.getDlcs(), notNullValue());
+        assertThat(gameResponse.getDlcs().length, equalTo(0));
     }
 
     @Test
